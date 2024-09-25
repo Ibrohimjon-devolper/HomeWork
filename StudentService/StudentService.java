@@ -23,7 +23,20 @@ public class StudentService {
         }
     }
 
-    
+
+    public Student searchStudentName(String name){
+        Student studentReturn = null;
+
+        for (Student student : students) {
+            if (student.getName().equals(name)) {
+                studentReturn=student;
+            }
+            break;
+        }
+
+        return studentReturn;
+
+    }
 
 
 }
